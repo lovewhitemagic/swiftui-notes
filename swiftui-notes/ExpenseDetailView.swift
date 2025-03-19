@@ -19,11 +19,7 @@ struct ExpenseDetailView: View {
         ExpenseDetail(category: "购物", emoji: "🛒", description: "超市日用品", date: Date().addingTimeInterval(-86400), amount: 100),
         ExpenseDetail(category: "餐饮", emoji: "🍱", description: "午餐", date: Date().addingTimeInterval(-90000), amount: 100),
         ExpenseDetail(category: "娱乐", emoji: "🎬", description: "电影票", date: Date().addingTimeInterval(-93600), amount: 100),
-        // 3月13日
-        ExpenseDetail(category: "医疗", emoji: "💊", description: "感冒药", date: Date().addingTimeInterval(-172800), amount: 300),
-        ExpenseDetail(category: "其他", emoji: "📝", description: "杂项支出", date: Date().addingTimeInterval(-176400), amount: 200),
-        ExpenseDetail(category: "餐饮", emoji: "🍜", description: "晚餐", date: Date().addingTimeInterval(-180000), amount: 150),
-        ExpenseDetail(category: "交通", emoji: "🚕", description: "打车", date: Date().addingTimeInterval(-183600), amount: 50),
+ 
         // 3月12日
         ExpenseDetail(category: "购物", emoji: "👕", description: "衣服", date: Date().addingTimeInterval(-259200), amount: 300),
         ExpenseDetail(category: "餐饮", emoji: "☕️", description: "下午茶", date: Date().addingTimeInterval(-262800), amount: 80),
@@ -56,7 +52,8 @@ struct ExpenseDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                ForEach(groupedExpenses, id: \.0) { date, expenses, dailyTotal in
+                ForEach(Array(groupedExpenses.enumerated()), id: \.1.0) { groupIndex, group in
+                    let (date, expenses, dailyTotal) = group
                     // 日期标题
                     HStack {
                         Text(date)
@@ -68,10 +65,10 @@ struct ExpenseDetailView: View {
                             .padding(.trailing)
                     }
                     .frame(height: 40)
-                    .background(.gray)
+                    .background(Color(white: 0.8 - (Double(groupIndex) * 0.1)))
                     
                     // 当日支出列表
-                    ForEach(Array(expenses.enumerated()), id: \.1.id) { index, expense in
+                    ForEach(expenses) { expense in
                         HStack {
                             // 左侧emoji和分类
                             HStack(spacing: 4) {
@@ -99,14 +96,12 @@ struct ExpenseDetailView: View {
                         }
                         .padding(.horizontal)
                         .frame(height: 60)
-                        .background(
-                            Color(white: 0.8 - (Double(expenses.firstIndex(where: { $0.category == expense.category }) ?? 0) * 0.1))
-                        )
+                        .background(Color(white: 0.8 - (Double(groupIndex) * 0.1)))
                     }
                 }
             }
         }
-        .background(Color(white: 0.2))
+        .background(Color(white: 0.8 - (Double(groupedExpenses.count - 1) * 0.1)))
         .ignoresSafeArea()
     }
 }
