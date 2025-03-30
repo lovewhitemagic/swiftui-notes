@@ -16,8 +16,6 @@ struct CustomSheetView: View {
                 .presentationBackground(.clear)
                 // 设置检测边缘
                 .presentationDetents([.medium])
-                // 设置拖动指示器颜色
-                .presentationDragIndicator(.visible)
                 // 设置sheet整体边距
                 .padding(.horizontal, 16)
                 .padding(.bottom, 10)
