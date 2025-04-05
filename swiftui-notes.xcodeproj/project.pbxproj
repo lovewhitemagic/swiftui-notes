@@ -6,12 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		F9246E612D85E99F0057B59C /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = F9246E602D85E99F0057B59C /* PagerTabStripView */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		F9246E5F2D85E9990057B59C /* PagerTabStripView-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "PagerTabStripView-master"; path = "../../../Downloads/PagerTabStripView-master"; sourceTree = "<group>"; };
 		F98A5DD52D7EABAD002CD7D2 /* swiftui-notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -28,26 +23,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9246E612D85E99F0057B59C /* PagerTabStripView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F9246E5E2D85E9990057B59C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F9246E5F2D85E9990057B59C /* PagerTabStripView-master */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F98A5DCC2D7EABAD002CD7D2 = {
 			isa = PBXGroup;
 			children = (
 				F98A5DD72D7EABAD002CD7D2 /* swiftui-notes */,
-				F9246E5E2D85E9990057B59C /* Frameworks */,
 				F98A5DD62D7EABAD002CD7D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,7 +65,6 @@
 			);
 			name = "swiftui-notes";
 			packageProductDependencies = (
-				F9246E602D85E99F0057B59C /* PagerTabStripView */,
 			);
 			productName = "swiftui-notes";
 			productReference = F98A5DD52D7EABAD002CD7D2 /* swiftui-notes.app */;
@@ -340,13 +324,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F9246E602D85E99F0057B59C /* PagerTabStripView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PagerTabStripView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F98A5DCD2D7EABAD002CD7D2 /* Project object */;
 }
