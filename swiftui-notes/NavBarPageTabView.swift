@@ -58,6 +58,7 @@ struct NavBarPageTabView: View {
                     }
                     .padding(.horizontal)
                 }
+            
                 
                 // 页面内容
                 TabView(selection: $selectedPage) {
@@ -66,6 +67,7 @@ struct NavBarPageTabView: View {
                             .tag(index)
                     }
                 }
+                  .ignoresSafeArea()
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .onChange(of: selectedPage) { newValue in
                     // 当页面改变时，可以在这里添加额外的逻辑
@@ -104,7 +106,6 @@ struct PageContent: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 20)
                 
                 // 示例内容
                 ForEach(filteredItems, id: \.self) { item in
