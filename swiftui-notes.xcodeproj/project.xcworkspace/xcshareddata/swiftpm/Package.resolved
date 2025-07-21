@@ -1,0 +1,15 @@
+{
+  "originHash" : "ce178c8401cf12a27c5e663bd6caed6605d27c4eed5d9edead70455d7262e76e",
+  "pins" : [
+    {
+      "identity" : "feedbacksupport",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lovewhitemagic/FeedbackSupport",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8d43b4a9091f6ee82a1db9915c163e2b4fcd01ad"
+      }
+    }
+  ],
+  "version" : 3
+}

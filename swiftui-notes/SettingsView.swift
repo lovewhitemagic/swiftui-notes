@@ -1,4 +1,5 @@
 import SwiftUI
+import FeedbackSupport
 
 struct AppSettingsView: View {
     @State private var isDailyReminderEnabled = false
@@ -8,6 +9,13 @@ struct AppSettingsView: View {
     @State private var diaryTextColor = Color.blue
     private let isProUser = false
     private let dailyReminderTime = "09:00"
+    
+    private let helper = SettingsActionHelper(
+        email: "282979785@qq.com",
+        subject: "日记App反馈",
+        appID: "6748575745",
+        shareText: "我在使用这款很棒的日记应用：日记，推荐给你！"
+    )
     
     var body: some View {
             ScrollView {
@@ -26,7 +34,7 @@ struct AppSettingsView: View {
                     preferencesGroup
                     customizationGroup
                     dataManagementGroup
-                    AboutSection()
+                   AboutSection(helper: helper)
                     
                     // 版本信息
                     VersionInfoView()
