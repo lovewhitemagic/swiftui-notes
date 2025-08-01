@@ -29,9 +29,6 @@ struct BlurEffectExampleView: View {
             // 顶部文字
             Text("模糊导航栏")
                 .font(.title2)
-                .fontWeight(.semibold)
-                .foregroundColor(.primary)
-                .frame(maxWidth: .infinity, alignment: .top)
                 .padding(.top, 50)
 
             // 底部模糊背景 + 按钮
