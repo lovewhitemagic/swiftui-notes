@@ -42,8 +42,9 @@ struct BlurEffectExampleView: View {
                     Text("浮动按钮")
                         .font(.headline)
                         .foregroundColor(.white)
-                        .frame(width: 150, height: 50)
-                        .background(Color.blue)
+                     .padding(.horizontal, 24)
+                        .padding(.vertical, 12)
+        .background(Color.blue)
                         .cornerRadius(25)
                 }
                 .padding(.bottom, 20)
